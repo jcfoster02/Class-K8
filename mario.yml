@@ -1,0 +1,24 @@
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  creationTimestamp: null
+  labels:
+    app: t4
+  name: t4
+spec:
+  replicas: 1
+  selector:
+    matchLabels:
+      app: t4
+  strategy: {}
+  template:
+    metadata:
+      creationTimestamp: null
+      labels:
+        app: t4
+    spec:
+      containers:
+      - image: docker.io/pengbai/docker-supermario
+        name: docker-supermario
+        resources: {}
+status: {}
