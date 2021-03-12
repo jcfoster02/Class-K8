@@ -1,0 +1,26 @@
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  creationTimestamp: null
+  labels:
+    run: wordpress
+  name: wordpress
+spec:
+  replicas: 1
+  selector:
+    matchLabels:
+      run: wordpress
+  strategy: {}
+  template:
+    metadata:
+      creationTimestamp: null
+      labels:
+        run: wordpress
+    spec:
+      containers:
+      - image: docker.io/wordpress
+        name: wordpress
+        resources: {}
+        ports:
+        - containerPort: 80
+status: {}
