@@ -7,12 +7,12 @@ spec:
   - name: html
     emptyDir: {}
   containers:
-  - name: 1st
+  - name: First
     image: nginx
     volumeMounts:
     - name: html
       mountPath: /html-demo1
-  - name: 2nd
+  - name: Second
     image: debian
     volumeMounts:
     - name: html
